@@ -9,7 +9,17 @@ const bookingRoutes = require('./routes/booking.js')
 dotenv.config();
 
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  "https://e-booking-shi.vercel.app"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
+// VERY IMPORTANT (handle preflight)
+app.options("*", cors());
 app.use(express.json());
 
 // Routes
