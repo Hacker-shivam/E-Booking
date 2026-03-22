@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'https://e-booking-dcra.onrender.com/api', 
+    baseURL: 'https://e-booking-cnyl.onrender.com/api', 
     headers:{
     'Content-Type': 'application/json',
     },
